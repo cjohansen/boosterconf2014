@@ -57,7 +57,7 @@ function render(game, player) {
         layout: player.layout,
         picture: player.picture,
         move: function (slot) {
-            puzzle.move(game, player, slot.id);
+            game.move(player, slot.id);
             render(game, player);
         }
     });
@@ -66,7 +66,7 @@ function render(game, player) {
 }
 
 var game = puzzle.createGame(3);
-var player = puzzle.addPlayer(game, "Christian", picture);
+var player = game.addPlayer("Christian", picture);
 
 render(game, player);
 ```
