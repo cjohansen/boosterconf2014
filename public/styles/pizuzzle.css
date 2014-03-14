@@ -1,0 +1,44 @@
+.navbar-header span.navbar-brand {
+    color: #fff;
+}
+
+.game-intro {
+    clear: both;
+    padding-top: 70px;
+}
+
+.game-intro .jumbotron h1 {
+    margin-top: 0;
+}
+
+.pizuzzle {
+    width: 438px;
+    height: 438px;
+    position: relative;
+}
+
+.slot {
+    height: 146px;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 146px;
+}
+
+.slot0 { background-position: 0 0; }
+.slot1 { background-position: -146px 0; }
+.slot2 { background-position: -292px 0; }
+.slot3 { background-position: 0 -146px; }
+.slot4 { background-position: -146px -146px; }
+.slot5 { background-position: -292px -146px; }
+.slot6 { background-position: 0 -292px; }
+.slot7 { background-position: -146px -292px; }
+.slot8 { background-position: -292px -292px; }
+
+.pos1, .pos4, .pos7 { left: 146px; }
+.pos3, .pos4, .pos5 { top: 146px; }
+.pos2, .pos5, .pos8 { left: 292px; }
+.pos6, .pos7, .pos8 { top: 292px; }

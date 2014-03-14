@@ -1,0 +1,38 @@
+{
+    "name": "pizuzzle",
+    "version": "0.1.0",
+    "description": "Picture sliding puzzle. Multiplayer style!",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "./node_modules/.bin/buster-test -e node"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cjohansen/pizuzzle.git"
+    },
+    "keywords": [
+        "game",
+        "react",
+        "realtime"
+    ],
+    "author": "Christian Johansen",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/cjohansen/pizuzzle/issues"
+    },
+    "homepage": "https://github.com/cjohansen/pizuzzle",
+    "dependencies": {
+        "bane": "~1.1",
+        "ejs": "~0.8",
+        "express": "~3.5",
+        "formidable": "~1.0"
+    },
+    "devDependencies": {
+        "buster": "~0.7",
+        "rimraf": "~2.2",
+        "supertest": "~0.9"
+    }
+}
