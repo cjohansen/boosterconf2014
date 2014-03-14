@@ -33,6 +33,7 @@
     "devDependencies": {
         "buster": "~0.7",
         "rimraf": "~2.2",
-        "supertest": "~0.9"
+        "supertest": "~0.9",
+        "morkdown": "~2.3"
     }
 }
