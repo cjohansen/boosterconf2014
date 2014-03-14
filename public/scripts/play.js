@@ -16,8 +16,16 @@
 
     // The server will emit this event every time the game state changes
     socket.on("game:update", function (game) {
-        // Bless the current player with the ability to move slots. This ensures
-        // every player can only move slots in their own game
+        game.players.forEach(function (player) {
+            // Bless the current player with the ability to move slots
+            // This ensures every player can only move slots in their
+            // own game
+            if (player.id === client.playerId) {
+                player.move = function (cell) {
+                    socket.emit("game:move", cell);
+                };
+            }
+        });
 
         gameUI.setState(game);
     });
