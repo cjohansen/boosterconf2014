@@ -28,7 +28,9 @@ var Pizuzzle = React.createClass({
                 picture: self.props.picture,
                 open: slot.open,
                 click: function () {
-                    self.props.move(slot);
+                    if (self.props.move) {
+                        self.props.move(slot);
+                    }
                 }
             });
         }));

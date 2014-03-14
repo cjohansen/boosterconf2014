@@ -105,8 +105,8 @@
      */
     function swap(matrix, curr, target) {
         return matrix.map(function (slot) {
-            if (curr === slot) { return target; }
-            if (target === slot) { return curr; }
+            if (curr === slot && target) { return target; }
+            if (target === slot && curr) { return curr; }
             return slot;
         });
     }

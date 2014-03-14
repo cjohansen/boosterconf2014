@@ -2,9 +2,13 @@
 var http = require("http");
 var express = require("express");
 var puzzle = require("./src/puzzle");
+var socketio = require("socket.io");
 
 // Our controller actions
 var server = require("./src/server");
+
+// Our socket "controller"
+var socket = require("./src/socket");
 
 // The Express app, with static files
 var app = express();
@@ -22,6 +26,9 @@ server.configureApp(app, games, {
     views: __dirname + "/views",
     public: public
 });
+
+// Set up the websocket communication with the browsers
+socket.configureSocket(socketio.listen(httpServer), games);
 
 // Start the server. Optionally, pass the port on the command line:
 // node index.js 9666
